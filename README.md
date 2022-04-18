@@ -1,0 +1,2 @@
+# Clevo-N960SC-N960SDS-N960SF1-Hackintosh
+Clevo-N960SC / N960SDS / N960SF1-Hackintosh
