@@ -17,3 +17,13 @@ CPU变频
 触控板（全系支持全手势）
 随航（有线/无线）
 支持休眠唤醒
+
+
+关闭 CFG Lock：使用 OpenCore 选单中的 GRUB Shell，回车进入命令行，输入，回车，然后退出setup_var 0x3E 0x0exit
+关闭 CFG Lock之后需要将配置文件中和两项 Quirks 禁用config.plistAppleCpuPmCfgLockAppleXcpmCfgLock
+
+可选项目（需要在 BIOS 中通过文件启动 GRUB Shell 来调出完整选项，输入）：禁用 SGX、Fastboot、VT-d、Platform Trust（下面是 BIOS 中的位置）setup_var 0x133 0x1
+SGX、快速启动、VT-d：高级->高级芯片组控制
+平台信任：高级 -> 芯片组配置
+开启 HIDPI（Big Sur及以上）：bash -c "$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/dev/hidpi.sh)"
+支持 macOS Monterey Developer Beta（OTA）
